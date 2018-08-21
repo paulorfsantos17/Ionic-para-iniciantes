@@ -9,13 +9,13 @@
 
 
 <ion-content padding>
-<ion-card>
+<ion-card *ngFor="let filme of lista_movie |async">
 
   <ion-item>
     <ion-avatar item-start>
       <img src= "/assets/imgs/logo.png">
     </ion-avatar>
-    <h2>{{nome_Usuario}}</h2>
+    <h2>{{filme.original_title}}</h2>
     <p>November 5, 1955</p>
   </ion-item>
 
