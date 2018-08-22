@@ -19,8 +19,8 @@ export class MovieProvider {
   }
 
   getLatestMovies():Observable<any>{
-   return	this.http.get('https://api.themoviedb.org/3/movie/latest?language=pt-BR&api_key=f26b0bb2942653de5ba63b265ebc98e3')
-   .map(response => response.json())
+   return	this.http.get(this.baseApiPath +'/movie/popular?language=pt-BR&api_key=' + this.apiKey)
+  
    
   }
 

@@ -9,20 +9,20 @@
 
 
 <ion-content padding>
-<ion-card *ngFor="let filme of lista_movie |async">
+<ion-card *ngFor=" let movie of lista_movie">
 
   <ion-item>
     <ion-avatar item-start>
       <img src= "/assets/imgs/logo.png">
     </ion-avatar>
-    <h2>{{filme.original_title}}</h2>
-    <p>November 5, 1955</p>
+    <h2>{{movie.original_title}} </h2>
+    <p>{{movie.release_date}}</p>
   </ion-item>
 
-  <img src="assets/imgs/advance-card-bttf.png">
+  <img [src]="'https://image.tmdb.org/t/p/w300' + movie.backdrop_path">
 
   <ion-card-content>
-    <p>My first  page of my app</p>
+    <p>{{movie.overview}}</p>
   </ion-card-content>
 
   <ion-row>
